@@ -1,0 +1,183 @@
+html {
+  height: 100%;
+}
+
+:root {
+  --color-top: linear-gradient(#000000b2, #0000004f);
+  --color-middle: #0000004f;
+  --color-bottom: linear-gradient(#0000004f, #000000b2);
+  --form-color: linear-gradient(#f59415c2, #f5941546);
+
+  --font-top: white;
+  --form-font: white;
+  --font-bottom: white;
+
+  --input-color: linear-gradient(#00000000, #0000003d);
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+}
+
+.nav {
+  background-image: url("hbk.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: clamp(40%, 45%, 50%);
+  /* padding-top: 30%; */
+  display: flex;
+  height: 100%;
+}
+
+.hoboken {
+  display: flex;
+  background-color: rgba(73, 85, 85, 0.868);
+  width: 100%;
+  height: 3%;
+  color: white;
+  justify-content: center;
+  opacity: 0.7;
+  margin-top: 40%;
+}
+
+.rightcontainer,
+.topcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.topcontainer {
+  background: var(--color-top);
+  color: var(--font-top);
+  font-size: large;
+}
+
+.middlecontainer {
+  background-color: var(--color-middle);
+}
+
+.footer {
+  background: var(--color-bottom);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: var(--font-bottom);
+}
+
+.footerText {
+  display: flex;
+  align-items: flex-end;
+}
+.secondRow,
+.thirdRow {
+  padding-bottom: 10%;
+}
+
+form {
+  background: var(--form-color);
+  color: var(--form-font);
+}
+
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 150px;
+  background-image: var(--input-color);
+}
+
+legend {
+  background: var(--color-bottom);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.fieldset,
+.formRow {
+  width: 100%;
+}
+#submit_button:hover {
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+form {
+  width: clamp(70%, 65%, 60%);
+  margin: 0 auto;
+}
+
+label,
+input {
+  display: inline-block;
+}
+
+label {
+  width: 30%;
+  text-align: right;
+}
+
+input {
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+}
+
+label + input {
+  width: 65%;
+  /* Large margin-right to force the next element to the new-line
+             and margin-left to create a gutter between the label and input */
+  /* margin: 0 30% 0 4%; */
+}
+
+#user_alerts {
+  justify-content: flex-start;
+  width: 10%;
+}
+
+#submit_button {
+  margin-top: 10%;
+  justify-content: flex-start;
+  border: 1px solid black;
+  width: clamp(40%, 50%, 60%);
+  background: var(--color-middle);
+  color: white;
+  border-color: black;
+}
+
+input:focus,
+select:focus {
+  border: 1px solid black;
+  background: --color-bottom;
+  border-radius: 5px;
+}
+
+input:invalid:focus {
+  border: 2px solid red;
+}
+
+input:out-of-range + span::after {
+  color: white;
+  background: red;
+  width: 155px;
+  content: "Outside of allowable range";
+}
+
+a {
+  color: orange;
+  font-weight: bold;
+}
+
+a:hover {
+  font-size: x-large;
+}
+
+.hoboken:hover {
+  font-weight: bold;
+}
